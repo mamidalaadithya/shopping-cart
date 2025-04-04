@@ -1,38 +1,245 @@
-.App {
+.shopping-cart {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #333;
+  line-height: 1.5;
+}
+
+.shopping-cart h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.shopping-cart h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* Products Section */
+.products-section {
+  margin-bottom: 25px;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info strong {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.product-info span {
+  color: #666;
+  font-size: 14px;
+}
+
+.product-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.quantity-selector button {
+  width: 30px;
+  height: 30px;
+  background: #f8f8f8;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.quantity-selector button:hover {
+  background: #eee;
+}
+
+.quantity-selector span {
+  width: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.add-to-cart-btn {
+  background: #4a90e2;
   color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.add-to-cart-btn:hover {
+  background: #3a7bc8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Divider */
+.divider {
+  height: 1px;
+  background: #eaeaea;
+  margin: 20px 0;
+}
+
+/* Cart Summary */
+.cart-summary {
+  margin-bottom: 25px;
+}
+
+.progress-bar-container {
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #3a7bc8; /* Sky blue */
+  transition: width 0.3s ease;
+}
+
+.summary-content {
+  padding: 0 5px;
+}
+
+.subtotal-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.subtotal-row strong {
+  font-weight: 600;
+}
+
+.threshold-message {
+  color: #666;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.gift-message {
+  color: #4CAF50;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.gift-message.show {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Cart Items */
+.cart-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.item-main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+}
+
+.item-info strong {
+  font-weight: 600;
+}
+
+.free-tag {
+  background: #4CAF50;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 8px;
+}
+
+.item-price {
+  color: #666;
+  font-size: 14px;
+}
+
+.item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.item-quantity span {
+  min-width: 20px;
+  text-align: center;
+}
+
+.increase-btn {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.decrease-btn {
+  width: 25px;
+  height: 25px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.increase-btn:hover {
+  background: #3e8e41;
+}
+
+.decrease-btn:hover {
+  background: #d32f2f;
+}
+
+.empty-cart {
+  color: #666;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.empty-cart p:first-child {
+  margin-bottom: 5px;
+  font-weight: 600;
 }
